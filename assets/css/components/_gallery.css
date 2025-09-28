@@ -69,8 +69,7 @@
   .gallery img {
     width: 100%;
     max-width: 180px;
-    /* height: 80px; */
-    height: auto;
+    height: 80px;
     object-fit: cover;
   }
 }
