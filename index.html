@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/home-page-styles.css">
+  <link rel="icon" type="image/x-icon" href="./assets/images/icons/batman.svg">
+  <script src="./assets/scripts/script.js"></script>
+  <title>Batverso</title>
+</head>
+<body>
+  <nav class="s-menu">
+    <ul>
+      <li class="s-menu__item">
+        <a href="/">Página Inicial</a>
+      </li>
+      <li class="s-menu__item">
+        <a href="#">Michael Keaton</a>
+      </li>
+      <li class="s-menu__item s-menu__icon">
+        <img id="img_logotipo" src="./assets/images/icons/batman.svg" alt="Batman Multiverse" width="40" height="56">
+      </li>
+      <li class="s-menu__item">
+        <a href="#">Christian Bale</a>
+      </li>
+      <li class="s-menu__item">
+        <a href="#">Robert Pattinson</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="s-container">
+    <div class="s-cards-carousel" style="transform: translateZ(-40vw) rotateY(0deg);">
+      <a href="./pages/michael-keaton/batman1.html" class="s-card" id="batman-01">
+        <img class="s-card__background" src="./assets/images/pic-batman-bg-01.jpg">
+        <img class="s-card__image" src="./assets/images/batman-01.png" alt="Michael Keaton">
+        <h2 class="s-card__title">Michael Keaton</h2>
+      </a>
+      <a href="./pages/christian-bale/batman1.html" class="s-card" id="batman-02">
+        <img class="s-card__background" src="./assets/images/pic-batman-bg-02.jpg">
+        <img class="s-card__image" src="./assets/images/batman-02.png" alt="Christian Bale">
+        <h2 class="s-card__title">Christian Bale</h2>
+      </a>
+      <a href="./pages/robert-pattinson/batman1.html" class="s-card" id="batman-03">
+        <img class="s-card__background" src="./assets/images/pic-batman-bg-03.jpg">
+        <img class="s-card__image" src="./assets/images/batman-03.png" alt="Robert Pattinson">
+        <h2 class="s-card__title">Robert Pattinson</h2>
+      </a>
+    </div>
+  </div>
+
+  <div class="s-controller">
+    <div id="1" onclick="selectCarouselItem(this)" class="s-controller__button s-controller__button--active">
+      01
+    </div>
+    <div id="2" onclick="selectCarouselItem(this)" class="s-controller__button">
+      02
+    </div>
+    <div id="3" onclick="selectCarouselItem(this)" class="s-controller__button">
+      03
+    </div>
+    <div class="s-controller__line"></div>
+  </div>
+</body>
+</html>

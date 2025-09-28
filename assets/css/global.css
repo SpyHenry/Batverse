@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+:root {
+  --primary-color: #1a1a1a;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+/* ===== MELHORIAS GLOBAIS MOBILE ===== */
+@media (max-width: 767px) {
+  html, body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  /* Melhor legibilidade */
+  p, span, div {
+    line-height: 1.5;
+  }
+  
+  /* Links touch-friendly */
+  a {
+    min-height: 44px;
+    min-width: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Ajustar z-index do background para não cobrir vídeos */
+  body::before {
+    z-index: -2;
+  }
+}

@@ -1,0 +1,384 @@
+@import url('reset.css');
+@import url('global.css');
+
+body {
+  background-color: var(--primary-color);
+}
+
+#img_logotipo {
+  width: 2.5rem;
+  height: 3.5rem;
+}
+
+/* Fix: garantir tamanho do ícone no menu em produção (GitHub Pages) */
+.s-menu__icon img#img_logotipo {
+  width: 2.5rem;
+  height: 3.5rem;
+  max-width: none;
+  max-height: none;
+  display: inline-block;
+}
+
+body::before {
+  content: "";
+  background-image: url('../images/batman-background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0.2;
+  transition: background-image 1s ease-in-out, opacity 1s ease-in-out;
+}
+
+.s-menu {
+  padding: 1rem 0;
+  width: 100%;
+  text-align: center;
+  position: relative;
+}
+
+.s-menu__item {
+  display: inline-block;
+  text-transform: uppercase;
+  margin: 0 1.25rem;
+}
+
+.s-menu__icon {
+  width: 2.5rem;
+  margin: 0 1.25rem;
+  vertical-align: middle;
+}
+
+.s-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  perspective: 3000px;
+}
+
+.s-card {
+  border: 0.4rem solid white;
+  width: 100%;
+  height: 65vh;
+  position: absolute;
+  transition: filter .5s ease-in-out;
+}
+
+.s-card:nth-child(1) {
+  transform: rotateY(0deg) translateZ(50vw);
+}
+
+.s-card:nth-child(2) {
+  transform: rotateY(120deg) translateZ(50vw);
+}
+
+.s-card:nth-child(3) {
+  transform: rotateY(240deg) translateZ(50vw);
+}
+
+.s-card__background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+.s-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: relative;
+  transition: 1s ease-in-out;
+}
+
+.s-card__title {
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  transition: bottom 1s ease-in-out;
+}
+
+.s-controller {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  bottom: 1.5rem;
+  width: 100%;
+}
+
+.s-controller__button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 1;
+  transition: transform 0.3s ease-in-out;
+}
+
+.s-controller__button:hover {
+  transform: scale(1.1);
+}
+
+.s-controller__button:nth-child(2) {
+  margin: 0 3.75rem;
+}
+
+.s-controller__button--active {
+  background-color: white;
+  color: var(--primary-color);
+  border: 0.1875rem solid var(--primary-color);
+  outline: 0.125rem solid white;
+}
+
+.s-controller__line {
+  background-color: white;
+  width: 50%;
+  height: 2px;
+  position: absolute;
+}
+
+/* Hover Animation */
+
+.s-card--hovered .s-card__background {
+  cursor: pointer;
+  opacity: 0;
+}
+
+.s-card--hovered .s-card__image {
+  transform: scale(1.4);
+  filter: drop-shadow(30px 10px 4px rgba(0, 0, 0, .5));
+}
+
+body#batman-01-hovered::before {
+  background-image: url('../images/pic-batman-bg-01.jpg');
+}
+
+body#batman-02-hovered::before {
+  background-image: url('../images/pic-batman-bg-02.jpg');
+}
+
+body#batman-03-hovered::before {
+  background-image: url('../images/pic-batman-bg-03.jpg');
+}
+
+body[id^="batman-"]::before {
+  opacity: 1;
+}
+
+body[id^="batman-"] .s-card:not(.s-card--hovered) {
+  filter: grayscale(100%);
+}
+
+.s-card--hovered .s-card__title {
+  bottom: 50%;
+}
+
+.s-cards-carousel {
+  display: flex;
+  justify-content: center;
+  width: calc(100vw / 3 - 10%);
+  transform-style: preserve-3d;
+  transition: transform 0.4s ease-in;
+}
+
+/* ===== LANDING PAGE MOBILE ===== */
+@media (max-width: 767px) {
+  /* Layout geral mobile */
+  body {
+    overflow-x: hidden;
+  }
+  
+  /* Menu mobile - mais compacto */
+  .s-menu {
+    padding: 1rem 0;
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+  }
+  
+  .s-menu__item {
+    margin: 0 0.3rem;
+    font-size: 0.7rem;
+  }
+  
+  .s-menu__icon {
+    width: 2rem;
+    margin: 0 0.5rem;
+  }
+  
+  #img_logotipo {
+    width: 2rem;
+    height: 2.8rem;
+  }
+  
+  /* Container mobile - landing page style */
+  .s-container {
+    perspective: none ;
+    display: flex ;
+    flex-direction: column ;
+    align-items: center ;
+    padding: 2rem 1rem ;
+    min-height: 100vh ;
+    width: 100% ;
+    box-sizing: border-box ;
+    background-image: url('../images/batman-background.jpg');
+  }
+  
+  /* Cards em coluna vertical */
+  .s-cards-carousel {
+    display: flex ;
+    flex-direction: column ;
+    justify-content: center ;
+    align-items: center ;
+    width: 100% ;
+    max-width: 400px ;
+    transform: none ;
+    transform-style: initial ;
+    gap: 2rem ;
+    padding: 1rem 0 ;
+    margin: 0 auto ;
+  }
+  
+  /* Cards mobile - retângulos perfeitos */
+  .s-card {
+    position: relative ;
+    display: block ;
+    transform: none ;
+    width: 280px ;
+    height: 400px ;
+    margin: 0 ;
+    border-radius: 12px ;
+    border: 3px solid white ;
+    overflow: hidden ;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5) ;
+    background: #1a1a1a ;
+    flex-shrink: 0 ;
+  }
+  
+  /* Remover todos os transforms e posicionamentos 3D */
+  .s-card:nth-child(1),
+  .s-card:nth-child(2),
+  .s-card:nth-child(3) {
+    transform: none ;
+    position: relative ;
+    left: auto ;
+    right: auto ;
+    top: auto ;
+    bottom: auto ;
+    width: 280px ;
+    height: 400px ;
+  }
+  
+  /* Imagens dos cards - simples e funcional */
+  .s-card__background {
+    display: block ;
+    width: 100% ;
+    height: 100% ;
+    object-fit: cover ;
+    position: absolute ;
+    top: 0 ;
+    left: 0 ;
+    z-index: 1 ;
+  }
+  
+  .s-card__image {
+    width: 100% ;
+    height: 100% ;
+    object-fit: cover ;
+    object-position: center ;
+    position: absolute ;
+    top: 0 ;
+    left: 0 ;
+    z-index: 2 ;
+  }
+  
+  /* Título mobile - sobreposto na parte inferior */
+  .s-card__title {
+    position: absolute ;
+    bottom: 0 ;
+    left: 0 ;
+    right: 0 ;
+    font-size: 1.1rem ;
+    padding: 20px 15px ;
+    background: linear-gradient(to top, rgba(0,0,0,0.95), rgba(0,0,0,0.7), transparent) ;
+    color: white ;
+    text-align: center ;
+    font-weight: bold ;
+    text-transform: uppercase ;
+    z-index: 10 ;
+    letter-spacing: 1px ;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8) ;
+  }
+  
+  /* Esconder controles do carrossel */
+  .s-controller {
+    display: none ;
+  }
+  
+  /* Desabilitar hover mobile e forçar reset */
+  .s-card--hovered .s-card__background,
+  .s-card--hovered .s-card__image,
+  .s-card--hovered .s-card__title {
+    all: unset ;
+  }
+  
+  /* Reset completo para mobile - garantir organização */
+  .s-card,
+  .s-card:hover,
+  .s-card--hovered {
+    position: relative ;
+    transform: none ;
+    left: auto ;
+    right: auto ;
+    top: auto ;
+    margin: 0 ;
+    float: none ;
+  }
+}
+
+/* Mobile muito pequeno - manter organização */
+@media (max-width: 480px) {
+  .s-cards-carousel {
+    gap: 1.5rem ;
+    max-width: 300px ;
+  }
+  
+  .s-card {
+    width: 260px ;
+    height: 360px ;
+  }
+  
+  .s-card:nth-child(1),
+  .s-card:nth-child(2),
+  .s-card:nth-child(3) {
+    width: 260px ;
+    height: 360px ;
+  }
+  
+  .s-card__title {
+    font-size: 0.95rem ;
+    padding: 16px 10px ;
+  }
+  
+  .s-menu__item {
+    margin: 0 0.2rem ;
+    font-size: 0.65rem ;
+  }
+}

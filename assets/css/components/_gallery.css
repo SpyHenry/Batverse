@@ -1,0 +1,86 @@
+.gallery {
+  margin-top: 0;
+  padding: 0;
+}
+
+.gallery ul{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery ul li{
+  margin: 0;
+}
+
+.gallery ul li:first-child{
+  margin: 0;
+}
+
+.gallery ul li a img{
+  border:solid 6px white;
+  border-radius: 15px;
+  transition: border .5s ease-in-out;
+}
+
+.gallery ul li a img:hover{
+  border:solid 6px var(--primary-color);
+  transition: border .3s ease-in-out;
+}
+
+.gallery img{
+  width: 180px;
+  height: 130px;
+  object-fit: cover;
+}
+
+/* ===== GALLERY MOBILE - GRID RESPONSIVO ===== */
+@media (max-width: 767px) {
+  .gallery {
+    margin: 0;
+    padding: 1rem 0;
+  }
+  
+  .gallery ul {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+  }
+  .gallery ul li {
+    margin: 0;
+  }
+  
+  .gallery ul li a img {
+    border: 2px solid white;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .gallery ul li a img:hover {
+    border-color: #FFD700;
+    transform: scale(1.05);
+  }
+  
+  .gallery img {
+    width: 100%;
+    height: 80px;
+    object-fit: cover;
+  }
+}
+
+/* Mobile muito pequeno */
+@media (max-width: 480px) {
+  .gallery ul {
+    gap: 0.3rem;
+  }
+  
+  .gallery ul li a img {
+    border-width: 1px;
+    border-radius: 6px;
+  }
+}
