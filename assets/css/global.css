@@ -8,7 +8,7 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
-/* ===== MELHORIAS GLOBAIS MOBILE ===== */
+/* ===== MOBILE ===== */
 @media (max-width: 767px) {
   html, body {
     overflow-x: hidden;
@@ -19,12 +19,10 @@ body {
     box-sizing: border-box;
   }
   
-  /* Melhor legibilidade */
   p, span, div {
     line-height: 1.5;
   }
   
-  /* Links touch-friendly */
   a {
     min-height: 44px;
     min-width: 44px;
@@ -33,7 +31,7 @@ body {
     justify-content: center;
   }
   
-  /* Ajustar z-index do background para não cobrir vídeos */
+  /* z-index do background */
   body::before {
     z-index: -2;
   }
