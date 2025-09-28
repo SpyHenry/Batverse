@@ -9,3 +9,8 @@
   font-size: 16px;
   text-decoration: none;
 }
+/* Reset para imagens */
+img {
+  max-width: 100%;
+  height: auto;
+}

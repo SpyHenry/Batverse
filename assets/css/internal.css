@@ -33,12 +33,17 @@
   z-index: 1;
 }
 
+/*  */
 .s-logo img{
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+  display: block;  
   width: 500px;
   height: 120px;
   object-fit: fill;
 }
-
+/*  */
 .s-wrapper .s-main-content{
   height: 100%;
   width: 100%;
