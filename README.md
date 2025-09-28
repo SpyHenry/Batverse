@@ -3,7 +3,7 @@
 Projeto interativo do multiverso Batman, com páginas temáticas, trilhas sonoras, trailers e galeria de imagens dos principais Batmans do cinema.
 
 <div align="center">
-  <img src="src/images/preview.png" alt="Preview" width="600px">
+  <img src="assets/images/preview.png" alt="Preview" width="600px">
   
   ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
   ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
