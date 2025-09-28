@@ -2,11 +2,15 @@
 
 Projeto interativo do multiverso Batman, com páginas temáticas, trilhas sonoras, trailers e galeria de imagens dos principais Batmans do cinema.
 
-[▶️ Acessar Demonstração](https://spyhenry.github.io/Batverse/)
-
+<div align="center">
+  <img src="src/images/preview.png" alt="Preview do Jogo" width="600px">
+  
+  ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
+  ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
+  ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
+  
 </div>
 
----
 
 ## 🎬 Batmans presentes
 - Michael Keaton
