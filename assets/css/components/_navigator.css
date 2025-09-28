@@ -56,6 +56,21 @@
   top: -20px;
 }
 
+.navigator img{
+  width: 45px;
+  height: 45px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: solid 2px white;
+  background-color: black;
+}
+
+.navigator .navigator__icon:hover{
+  transform: scale(1.1);
+  transition: transform 0.3s ease-in-out;
+}
+
+
 .navigator .navigator__icon img{
   width: 45px;
   height: 45px;

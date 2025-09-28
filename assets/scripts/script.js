@@ -20,6 +20,9 @@ function addEventListenersToCards() {
 
 document.addEventListener("DOMContentLoaded", addEventListenersToCards, false);
 
+
+// EFEITO CARROSSEL 3D
+
 function selectCarouselItem(selectedButtonElement) {
   const selectedItem = selectedButtonElement.id;
   const carousel = document.querySelector('.s-cards-carousel');
