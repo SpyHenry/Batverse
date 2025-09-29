@@ -30,5 +30,6 @@ Projeto interativo do multiverso Batman, com páginas temáticas, trilhas sonora
 
 
 ## 📝 Autor
-Desenvolvido por **Henrique Bandeira**, através do Bootcamp da **DIO**<br>
+Desenvolvido por **Henrique Bandeira** <br>
+
 [![LinkedIn](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/henrique-baptista-bandeira)
