@@ -33,7 +33,11 @@
   z-index: 1;
 }
 
-/*  */
+#img-west {
+  width: 450px;
+  height: 180px;
+}
+
 .s-logo img{
   max-width: 100%;
   height: auto;
@@ -43,7 +47,7 @@
   height: 120px;
   object-fit: fill;
 }
-/*  */
+
 .s-wrapper .s-main-content{
   height: 100%;
   width: 100%;
