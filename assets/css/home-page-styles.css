@@ -133,7 +133,7 @@ body::before {
 }
 
 .s-controller__button {
-  margin: 0 0.75rem;
+  margin: 0 2rem;
 }
 
 .s-controller__button:first-child {
