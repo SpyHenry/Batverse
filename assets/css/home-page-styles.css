@@ -63,11 +63,15 @@ body::before {
 }
 
 .s-card:nth-child(2) {
-  transform: rotateY(120deg) translateZ(50vw);
+  transform: rotateY(90deg) translateZ(50vw);
 }
 
 .s-card:nth-child(3) {
-  transform: rotateY(240deg) translateZ(50vw);
+  transform: rotateY(180deg) translateZ(50vw);
+}
+
+.s-card:nth-child(4) {
+  transform: rotateY(270deg) translateZ(50vw);
 }
 
 .s-card__background {
@@ -128,8 +132,16 @@ body::before {
   transform: scale(1.1);
 }
 
-.s-controller__button:nth-child(2) {
-  margin: 0 3.75rem;
+.s-controller__button {
+  margin: 0 0.75rem;
+}
+
+.s-controller__button:first-child {
+  margin-left: 0;
+}
+
+.s-controller__button:last-child {
+  margin-right: 0;
 }
 
 .s-controller__button--active {
@@ -168,6 +180,10 @@ body#batman-02-hovered::before {
 
 body#batman-03-hovered::before {
   background-image: url('../images/pic-batman-bg-03.jpg');
+}
+
+body#batman-04-hovered::before {
+  background-image: url('../images/pic-batman-bg-04.jpg');
 }
 
 body[id^="batman-"]::before {
@@ -266,7 +282,8 @@ body[id^="batman-"] .s-card:not(.s-card--hovered) {
   /* Remover todos os transforms e posicionamentos 3D */
   .s-card:nth-child(1),
   .s-card:nth-child(2),
-  .s-card:nth-child(3) {
+  .s-card:nth-child(3),
+  .s-card:nth-child(4) {
     transform: none ;
     position: relative ;
     left: auto ;
@@ -358,7 +375,8 @@ body[id^="batman-"] .s-card:not(.s-card--hovered) {
   
   .s-card:nth-child(1),
   .s-card:nth-child(2),
-  .s-card:nth-child(3) {
+  .s-card:nth-child(3),
+  .s-card:nth-child(4) {
     width: 260px ;
     height: 360px ;
   }
