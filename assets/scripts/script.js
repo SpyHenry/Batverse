@@ -20,6 +20,13 @@ function addEventListenersToCards() {
 
 document.addEventListener("DOMContentLoaded", addEventListenersToCards, false);
 
+// VOLUME DO ÁUDIO DE FUNDO
+document.addEventListener("DOMContentLoaded", function() {
+  const bgMusic = document.getElementById('bg-music');
+  if (bgMusic) {
+    bgMusic.volume = 0.3; // Volume baixo (30%)
+  }
+});
 
 // EFEITO CARROSSEL 3D
 
@@ -28,8 +35,8 @@ function selectCarouselItem(selectedButtonElement) {
   const carousel = document.querySelector('.s-cards-carousel');
   const transform = carousel.style.transform;
   const rotateY = transform.match(/rotateY\((-?\d+deg)\)/i);
-  // Ajustado para 4 cards: 360deg ÷ 4 = 90deg por posição
-  const rotateYDeg = -90 * (Number(selectedItem) - 1);
+  // Ajustar para + cards: 360deg ÷ x = x deg por posição
+  const rotateYDeg = - 60 * (Number(selectedItem) - 1);
   const newTransform = transform.replace(rotateY[0], `rotateY(${rotateYDeg}deg)`);
 
   carousel.style.transform = newTransform;

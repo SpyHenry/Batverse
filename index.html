@@ -12,6 +12,11 @@
   <link rel="icon" type="image/x-icon" href="./assets/images/icons/batman.svg">
   <script src="./assets/scripts/script.js"></script>
   <title>Batverso</title>
+
+  <audio id="bg-music" autoplay loop>
+    <source src="./assets/audios/main-theme.mp3" type="audio/mp3" />
+  </audio>
+
 </head>
 <body>
   <nav class="s-menu">
@@ -22,11 +27,17 @@
       <li class="s-menu__item">
         <a href="#">Michael Keaton</a>
       </li>
+      <li class="s-menu__item" id="george-clooney-val-kilmer">
+        <a href="#">Kilmer e Clooney</a>
+      </li>
       <li class="s-menu__item s-menu__icon">
         <img id="img_logotipo" src="./assets/images/icons/batman.svg" alt="Batman Multiverse" width="40" height="56" style="width: 2.5rem ; height: 3.5rem ; max-width: 2.5rem ; max-height: 3.5rem ;">
       </li>
       <li class="s-menu__item">
         <a href="#">Christian Bale</a>
+      </li>
+      <li class="s-menu__item">
+        <a href="#">Ben Affleck</a>
       </li>
       <li class="s-menu__item">
         <a href="#">Robert Pattinson</a>
@@ -55,6 +66,16 @@
         <img class="s-card__image" src="./assets/images/batman-04.png" alt="Adam West">
         <h2 class="s-card__title">Adam West</h2>
       </a>
+      <a href="./pages/ben-affleck/batman1.html" class="s-card" id="batman-05">
+        <img class="s-card__background" src="./assets/images/pic-batman-bg-05.jpg">
+        <img class="s-card__image" src="./assets/images/batman-05.png" alt="Ben Affleck">
+        <h2 class="s-card__title">Ben Affleck</h2>
+      </a>
+      <a href="./pages/george-clooney-val-kilmer/batman1.html" class="s-card" id="batman-06">
+        <img class="s-card__background" src="./assets/images/pic-batman-bg-06.jpg">
+        <img class="s-card__image" src="./assets/images/batman-06.png" alt="George Clooney e Val Kilmer">
+        <h2 class="s-card__title">Val Kilmer e George Clooney</h2>
+      </a>
     </div>
   </div>
 
@@ -70,6 +91,12 @@
     </div>
     <div id="4" onclick="selectCarouselItem(this)" class="s-controller__button">
       04
+    </div>
+    <div id="5" onclick="selectCarouselItem(this)" class="s-controller__button">
+      05
+    </div>
+    <div id="6" onclick="selectCarouselItem(this)" class="s-controller__button">
+      06
     </div>
     <div class="s-controller__line"></div>
   </div>

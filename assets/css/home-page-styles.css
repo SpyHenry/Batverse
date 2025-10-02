@@ -63,15 +63,23 @@ body::before {
 }
 
 .s-card:nth-child(2) {
-  transform: rotateY(90deg) translateZ(50vw);
+  transform: rotateY(60deg) translateZ(50vw);
 }
 
 .s-card:nth-child(3) {
-  transform: rotateY(180deg) translateZ(50vw);
+  transform: rotateY(120deg) translateZ(50vw);
 }
 
 .s-card:nth-child(4) {
-  transform: rotateY(270deg) translateZ(50vw);
+  transform: rotateY(180deg) translateZ(50vw);
+}
+
+.s-card:nth-child(5) {
+  transform: rotateY(240deg) translateZ(50vw);
+}
+
+.s-card:nth-child(6) {
+  transform: rotateY(300deg) translateZ(50vw);
 }
 
 .s-card__background {
@@ -133,7 +141,7 @@ body::before {
 }
 
 .s-controller__button {
-  margin: 0 2rem;
+  margin: 0 1.84rem;
 }
 
 .s-controller__button:first-child {
@@ -153,7 +161,7 @@ body::before {
 
 .s-controller__line {
   background-color: white;
-  width: 50%;
+  width: 55%;
   height: 2px;
   position: absolute;
 }
@@ -186,6 +194,14 @@ body#batman-04-hovered::before {
   background-image: url('../images/pic-batman-bg-04.jpg');
 }
 
+body#batman-05-hovered::before {
+  background-image: url('../images/pic-batman-bg-05.jpg');
+}
+
+body#batman-06-hovered::before {
+  background-image: url('../images/pic-batman-bg-06.jpg');
+}
+
 body[id^="batman-"]::before {
   opacity: 1;
 }
@@ -203,12 +219,12 @@ body[id^="batman-"] .s-card:not(.s-card--hovered) {
   justify-content: center;
   width: calc(100vw / 3 - 10%);
   transform-style: preserve-3d;
-  transition: transform 0.4s ease-in;
+  transition: transform 0.5s ease-in-out;
 }
 
 /* ===== LANDING PAGE MOBILE ===== */
 @media (max-width: 767px) {
-  /* Layout geral mobile */
+
   body {
     overflow-x: hidden;
   }
@@ -246,6 +262,10 @@ body[id^="batman-"] .s-card:not(.s-card--hovered) {
     width: 100% ;
     box-sizing: border-box ;
     background-image: url('../images/batman-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
   }
   
   /* Cards em coluna vertical */
@@ -283,7 +303,9 @@ body[id^="batman-"] .s-card:not(.s-card--hovered) {
   .s-card:nth-child(1),
   .s-card:nth-child(2),
   .s-card:nth-child(3),
-  .s-card:nth-child(4) {
+  .s-card:nth-child(4),
+  .s-card:nth-child(5),
+  .s-card:nth-child(6) {
     transform: none ;
     position: relative ;
     left: auto ;
@@ -376,7 +398,9 @@ body[id^="batman-"] .s-card:not(.s-card--hovered) {
   .s-card:nth-child(1),
   .s-card:nth-child(2),
   .s-card:nth-child(3),
-  .s-card:nth-child(4) {
+  .s-card:nth-child(4),
+  .s-card:nth-child(5),
+  .s-card:nth-child(6) {
     width: 260px ;
     height: 360px ;
   }
