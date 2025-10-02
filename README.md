@@ -15,7 +15,10 @@ Projeto interativo do multiverso Batman, com páginas temáticas, trilhas sonora
 ## 🎬 Batmans presentes
 - Adam West
 - Michael Keaton
+- George Clooney
+- Val Kilmer
 - Christian Bale
+- Ben Affleck
 - Robert Pattinson
 
 ## ✨ Funcionalidades
